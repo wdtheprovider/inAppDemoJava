@@ -311,8 +311,10 @@ public class SubscriptionActivity extends AppCompatActivity implements RecycleVi
                                                 .build()))
                         .setSubscriptionUpdateParams(
                                 BillingFlowParams.SubscriptionUpdateParams.newBuilder()
-                                        .setOldSkuPurchaseToken(prefs.getString("purchasedToken", ""))
-                                        .setReplaceSkusProrationMode(BillingFlowParams.ProrationMode.IMMEDIATE_AND_CHARGE_FULL_PRICE)
+                                        .setOldPurchaseToken(prefs.getString("purchasedToken", ""))
+                                        .setSubscriptionReplacementMode(BillingFlowParams.SubscriptionUpdateParams.ReplacementMode.CHARGE_FULL_PRICE)
+                                       // .setOldSkuPurchaseToken()
+                                        //.setReplaceSkusProrationMode(BillingFlowParams.ProrationMode.IMMEDIATE_AND_CHARGE_FULL_PRICE)
                                         .build())
                         .build();
 
