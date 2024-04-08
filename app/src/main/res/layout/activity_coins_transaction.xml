@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".activities.CoinsTransactionActivity">
 
     <include layout="@layout/custom_toolbar" />
@@ -42,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="200000"
+                        android:text="0"
                         android:textAllCaps="true"
                         android:textColor="@color/orange"
                         android:textSize="30sp"
@@ -54,6 +55,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
+                        android:textColor="@color/screen_bg_dark"
+
                         android:text="Total Purchased Coins"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -87,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_transaction_title"
                     android:layout_margin="10dp"
-                    android:text="34"
+                    android:text="0"
                     android:textColor="@color/green"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -97,6 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:textColor="@color/screen_bg_dark"
                     android:text="Total Transactions"
                     android:textAllCaps="true"
                     android:textStyle="bold" />
@@ -118,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_transaction_title"
                     android:layout_margin="10dp"
-                    android:text="R459"
+                    android:text="***"
                     android:textColor="@color/green"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -129,6 +133,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="Amount Spent"
+                    android:textColor="@color/screen_bg_dark"
+
                     android:textAllCaps="true"
                     android:textStyle="bold" />
 

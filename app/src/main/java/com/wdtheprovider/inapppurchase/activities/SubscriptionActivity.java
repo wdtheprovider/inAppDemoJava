@@ -93,6 +93,8 @@ public class SubscriptionActivity extends AppCompatActivity implements RecycleVi
                                     verifySubPurchase(purchase);
                                 }
                             }
+
+
                         }
                 ).build();
 
@@ -311,10 +313,8 @@ public class SubscriptionActivity extends AppCompatActivity implements RecycleVi
                                                 .build()))
                         .setSubscriptionUpdateParams(
                                 BillingFlowParams.SubscriptionUpdateParams.newBuilder()
-                                        .setOldPurchaseToken(prefs.getString("purchasedToken", ""))
+                                       .setOldPurchaseToken(prefs.getString("purchasedToken", ""))
                                         .setSubscriptionReplacementMode(BillingFlowParams.SubscriptionUpdateParams.ReplacementMode.CHARGE_FULL_PRICE)
-                                       // .setOldSkuPurchaseToken()
-                                        //.setReplaceSkusProrationMode(BillingFlowParams.ProrationMode.IMMEDIATE_AND_CHARGE_FULL_PRICE)
                                         .build())
                         .build();
 
