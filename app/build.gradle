@@ -6,12 +6,14 @@ plugins {
 android {
     compileSdk 34
 
+    namespace('com.wdtheprovider.inapppurchase')
+
     defaultConfig {
         applicationId "com.wdtheprovider.inapppurchase"
         minSdk 23
         targetSdk 34
-        versionCode 16
-        versionName "2.2"
+        versionCode 17
+        versionName "2.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,7 +31,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-    buildToolsVersion '34.0.0'
 }
 
 dependencies {
@@ -41,16 +42,12 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
 
-    def billing_version = "6.2.0"
+    def billing_version = "7.0.0"
     implementation "com.android.billingclient:billing:$billing_version"
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     implementation 'com.google.guava:guava:24.1-jre'
 
-    def appCenterSdkVersion = '4.4.5'
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-
-    implementation 'com.google.android.gms:play-services-ads:23.0.0'
+    implementation 'com.google.android.gms:play-services-ads:23.3.0'
     implementation platform('com.google.firebase:firebase-bom:31.0.1')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'

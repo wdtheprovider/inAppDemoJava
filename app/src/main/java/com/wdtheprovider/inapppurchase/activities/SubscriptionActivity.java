@@ -86,6 +86,7 @@ public class SubscriptionActivity extends AppCompatActivity implements RecycleVi
 
         billingClient = BillingClient.newBuilder(this)
                 .enablePendingPurchases()
+
                 .setListener(
                         (billingResult, list) -> {
                             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK && list != null) {
