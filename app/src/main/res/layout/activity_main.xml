@@ -56,7 +56,7 @@
         android:layout_below="@id/container_3"
         android:layout_marginBottom="10dp"
         android:layout_centerInParent="true"
-        android:text="Billing Library Version 7.0.0"
+        android:text="Billing Library Version 7.1.1"
         android:textColor="@color/white"
         android:textSize="11sp"
         android:layout_width="wrap_content"
@@ -77,6 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/userId"
+        android:visibility="gone"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         android:text="@string/not_subscribed"
@@ -94,6 +95,7 @@
             android:orientation="vertical">
 
             <Button
+                android:visibility="gone"
                 android:id="@+id/btn_subscribe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

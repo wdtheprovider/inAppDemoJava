@@ -12,10 +12,12 @@ android {
         applicationId "com.wdtheprovider.inapppurchase"
         minSdk 23
         targetSdk 34
-        versionCode 17
-        versionName "2.3"
+        versionCode 20
+        versionName "2.20"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -42,7 +44,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
 
-    def billing_version = "7.0.0"
+    def billing_version = "7.1.1"
     implementation "com.android.billingclient:billing:$billing_version"
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     implementation 'com.google.guava:guava:24.1-jre'
@@ -50,7 +52,6 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:23.3.0'
     implementation platform('com.google.firebase:firebase-bom:31.0.1')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
 
     implementation platform('com.google.firebase:firebase-bom:31.0.1')
     implementation 'com.google.firebase:firebase-config'
@@ -62,6 +63,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:21.0.0'
 
     implementation 'com.facebook.android:audience-network-sdk:6.12.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

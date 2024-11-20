@@ -2,6 +2,7 @@ package com.wdtheprovider.inapppurchase.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,17 @@ public class SubscriptionAdapter extends RecyclerView.Adapter<SubscriptionAdapte
         assert subDetails != null;
         holder.type.setText("1 "+currentItem.getName());
         holder.duration.setText("/"+currentItem.getName());
-        holder.price.setText(subDetails.get(0).getPricingPhases().getPricingPhaseList().get(0).getFormattedPrice());
+
+        String price = subDetails.get(0).getPricingPhases().getPricingPhaseList().get(0).getFormattedPrice();
+
+        if(price.equals("Free")){
+            holder.price.setText("7 Days Trial");
+
+        }else {
+            holder.price.setText(price);
+
+        }
+
     }
 
     @Override
